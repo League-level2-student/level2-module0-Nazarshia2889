@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Random;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class _01_RobotRace {
@@ -9,12 +11,19 @@ public class _01_RobotRace {
 		int x = 100;
 		int y = 500;
 		
+		
 		for(int i = 0;i<robots.length;i++) {
 			robots[i] = new Robot();
 			robots[i].setX(x);
 			robots[i].setY(y);
 			x += 150;
 			
+		}
+		for(int i = 0;i<robots.length;i++) {
+			Random rand = new Random();
+			int z = rand.nextInt(50);
+			robots[i].setSpeed(5);
+			robots[i].move(z);
 		}
 		
 		
