@@ -19,12 +19,24 @@ public class _01_RobotRace {
 			x += 150;
 			
 		}
+		boolean race = true;
+		while(race == true) {
 		for(int i = 0;i<robots.length;i++) {
 			Random rand = new Random();
 			int z = rand.nextInt(50);
 			robots[i].setSpeed(5);
 			robots[i].move(z);
+			if(robots[i].getY() <= 50) {
+				race = false;
+				robots[i].setSpeed(10);
+				robots[i].turn(365);
+			}
+			
 		}
+		
+		}
+		
+		
 		
 		
 	}
