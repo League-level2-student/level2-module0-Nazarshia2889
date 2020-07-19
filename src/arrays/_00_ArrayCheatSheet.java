@@ -41,5 +41,14 @@ public class _00_ArrayCheatSheet {
 		
 		//10. print the largest number in the array.
 		System.out.println(numbers[49]);
+		
+		int[] arr = new int[5];
+		for(int i = 0; i < arr.length; i++){
+		  arr[i] = i;
+		}
+
+		System.out.println(arr[5]);
+
+
 	}
 }
